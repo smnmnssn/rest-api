@@ -5,7 +5,7 @@ import cors from "cors";
 import express from "express";
 import http from "http";
 import mongoose from "mongoose";
-import router from "router";
+import router from "./router";
 
 const app = express();
 

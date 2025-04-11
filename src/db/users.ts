@@ -28,4 +28,4 @@ export const deleteUserById = (id: string) =>
   UserModel.findOneAndDelete({ _id: id });
 
 export const updateUserById = (id: string, values: Record<string, any>) =>
-  UserModel.findOneAndUpdate({id, values}); // error utan curly brackets
+  UserModel.findOneAndUpdate({_id: id}, values, { new: true }); 

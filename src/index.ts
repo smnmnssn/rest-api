@@ -18,6 +18,7 @@ app.use(
 app.use(compression());
 app.use(cookieParser());
 app.use(bodyParser.json());
+app.use("/", router());
 
 const server = http.createServer(app);
 
@@ -33,4 +34,3 @@ mongoose.connection.on("error", (error) =>
   console.log("Error connecting to DB", error)
 );
 
-app.use("/", router());

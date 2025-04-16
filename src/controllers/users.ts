@@ -21,9 +21,6 @@ export const deleteUser = async (
   res: express.Response
 ) => {
   try {
-    console.log("Delete route triggered");
-    console.log("Params:", req.params);
-    console.log("Headers:", req.headers);
     const { id } = req.params;
 
     const deletedUser = await deleteUserById(id);
